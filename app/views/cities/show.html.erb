@@ -1,0 +1,27 @@
+<div class="jumbotron" id="city_jumbotron" style="background-image: url(<%= @city.image %>)">
+  <h1><%= @city.name %>, <%= @city.country %></h1>
+</div>
+
+<div class="container">
+	<div class="row">
+		<% @restraunts.each do |restraunt| %>
+		  <div class="col-sm-6 col-md-4">
+			 <a href="/cities/<%= restraunt.city.id%>/restraunts/<%= restraunt.id%>">
+			    <div class="thumbnail">
+			      <img src="<%= restraunt.restraunt_image %>">
+			      <div class="caption">
+			        <h3 id="restraunt_thumnail_text"><%= restraunt.name %></h3>   
+			      </div>
+			    </div>
+			 </a>
+		  </div>
+		<% end %>  
+	</div>
+
+
+	
+	<%= link_to 'Edit', edit_city_path(@city) %> |
+	<%= link_to 'Back', cities_path %>
+</div>
+
+

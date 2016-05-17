@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Restraunts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>About</th>
+      <th>Restraunt image</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restraunts.each do |restraunt| %>
+      <tr>
+        <td><%= restraunt.name %></td>
+        <td><%= restraunt.about %></td>
+        <td><%= restraunt.restraunt_image %></td>
+        <td><%= restraunt.user %></td>
+        <td><%= link_to 'Show', restraunt %></td>
+        <td><%= link_to 'Edit', edit_restraunt_path(restraunt) %></td>
+        <td><%= link_to 'Destroy', restraunt, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restraunt', new_restraunt_path %>

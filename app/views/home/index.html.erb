@@ -1,0 +1,35 @@
+<div class="jumbotron" id="homepage_jumbotron">
+    <h1 id="homepage_heading">Find your local kosher</h1>
+    <p>Find and review kosher restraunts from cities all around the globe</p>
+    <div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle btn btn-success" id="homepage_button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select City <span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu">
+              <% @cities.each do |city| %>
+                <a href="cities/<%= city.id%>">
+                  <li><%= city.name %>, <%= city.country %></li>
+                </a>
+              <% end %>
+          </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="city_thumbnails">
+        <h2>Cities</h2  >
+        <% @cities.each do |city| %>
+          <div class="col-sm-6 col-md-4">
+              <div class="thumbnail">
+                  <a href="/cities/<%= city.id%>">
+                    <img src="<%= city.image %>">
+                  </a>
+              </div>
+          </div>
+        <% end %>
+    </div>
+</div>
+
+
+
+

@@ -13,3 +13,73 @@
  *= require_tree .
  *= require_self
  */
+
+
+*{
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar {
+	margin-bottom: 0;
+
+
+}
+
+#homepage_jumbotron {
+	margin: 0;
+	text-align: center;
+	background: url("homepage_background") no-repeat center;	
+	height: 600px;
+	color: white;	
+}
+
+#homepage_heading {
+	font-style: bold;
+	margin-top: 50px;
+}
+
+#homepage_button{
+	color: white;
+}
+
+
+#city_listing{
+	margin-top: 800px;
+}
+
+#city_thumbnails{
+	margin-top: 50px;
+	text-align: center;
+}
+
+#city_title{
+	margin-bottom: 50px;
+}
+
+#city_jumbotron{
+	text-align: center;
+	color: white;
+	height: 220px;	
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#restraunt_thumnail_text {
+	text-decoration: none;
+}
+
+#sign_in_window{
+	margin-top: 150px;
+	background-color: white;
+	padding: 20px 20px;
+	border-radius: 20px;
+}
+
+#sign_in_background{
+	background: url("sign_in_background.jpg") no-repeat center;	
+}
+
+#restraunt_image_profile{
+	width: 200px;
+	height: 200px;
+}

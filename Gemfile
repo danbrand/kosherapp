@@ -11,6 +11,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 gem 'devise'
+gem 'country_select', '~> 1.0'
+
+gem 'carrierwave'
+
+gem 'friendly_id', '~> 5.1.0'
+
+
 
 
 group :development, :test do
